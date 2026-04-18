@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -38,12 +39,15 @@ export default function Nav() {
         {/* Logo */}
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
           <div style={{
-            width: 28, height: 28, borderRadius: 8, background: "#CEFF05",
-            display: "flex", alignItems: "center", justifyContent: "center",
+            width: 28, height: 28, borderRadius: "50%",
+            overflow: "hidden", position: "relative", flexShrink: 0,
           }}>
-            <span style={{ color: "#000", fontWeight: 900, fontSize: 11, fontFamily: "var(--font-inter)" }}>
-              AL
-            </span>
+            <Image
+              src="/images/pp.png"
+              alt="Ali"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center top", filter: "grayscale(100%) sepia(40%) hue-rotate(20deg) saturate(300%) brightness(0.85)" }}
+            />
           </div>
           <span style={{ color: "#F5F5F5", fontWeight: 800, fontSize: 13, letterSpacing: "-0.03em", fontFamily: "var(--font-inter)" }}>
             Ali<span style={{ color: "#CEFF05" }}>.</span>dev

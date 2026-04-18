@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import data from "@/data/data.json";
 
 export default function Footer() {
@@ -16,10 +17,15 @@ export default function Footer() {
         {/* Logo */}
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
           <div style={{
-            width: 24, height: 24, borderRadius: 6, background: "#CEFF05",
-            display: "flex", alignItems: "center", justifyContent: "center",
+            width: 24, height: 24, borderRadius: "50%",
+            overflow: "hidden", position: "relative", flexShrink: 0,
           }}>
-            <span style={{ color: "#000", fontWeight: 900, fontSize: 8 }}>AL</span>
+            <Image
+              src="/images/pp.png"
+              alt="Ali"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center top", filter: "grayscale(100%) sepia(40%) hue-rotate(20deg) saturate(300%) brightness(0.85)" }}
+            />
           </div>
           <span style={{ color: "#333", fontWeight: 700, fontSize: 12, letterSpacing: "-0.02em" }}>
             Ali<span style={{ color: "#CEFF05" }}>.</span>dev

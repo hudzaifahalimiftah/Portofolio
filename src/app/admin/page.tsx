@@ -80,7 +80,7 @@ export default function AdminPage() {
         name: project.name, description: project.description,
         stack: project.stack.split(",").map(s => s.trim()).filter(Boolean),
         status: project.status, github: project.github || "#",
-        demo: project.demo || null, featured: false,
+        demo: (project.demo || null) as null, featured: false,
       }],
     };
     await saveToApi(updated, `Project "${project.name}" ditambahkan!`);

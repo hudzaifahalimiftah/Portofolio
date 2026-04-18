@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+/* ─── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html  { scroll-behavior: smooth; }
+body  {
+  color: #F5F5F5;
+  font-family: var(--font-jakarta), var(--font-inter), -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ─── Background scene (ternakklip-style) ───────────────────── */
+/*
+  Layer stack (bottom → top):
+  1. Pure black base (#000)
+  2. Dot grid — subtle, tight, dark
+  3. Radial spotlight — volt green glow behind hero
+  4. Vignette — darkens edges so center pops
+*/
+
+body {
+  background-color: #000;
+  /* dot grid */
+  background-image:
+    radial-gradient(circle, #1a1a1a 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-attachment: fixed;
+}
+
+/* Radial spotlight — sits behind page content, fixed so it doesn't scroll */
+body::before {
+  content: '';
+  position: fixed;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 700px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(206, 255, 5, 0.055) 0%,
+    rgba(206, 255, 5, 0.018) 35%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Edge vignette — keeps focus on center content */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 40%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure all page content sits above the body pseudo-elements */
+body > * { position: relative; z-index: 1; }
+
+
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #1a1a1a; border-radius: 2px; }
+
+/* ─── Spring button ──────────────────────────────────────────── */
+.btn-spring {
+  transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background 0.15s ease, color 0.15s ease;
+}
+.btn-spring:hover  { transform: scale(1.06); }
+.btn-spring:active { transform: scale(0.96); }
+
+/* ─── Bento card hover ───────────────────────────────────────── */
+.bento-card {
+  transition: transform 0.22s cubic-bezier(0.34, 1.4, 0.64, 1),
+              border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.bento-card:hover {
+  transform: scale(1.015);
+  border-color: #CEFF05 !important;
+  box-shadow: 0 0 24px rgba(206, 255, 5, 0.06);
+}
+
+/* ─── Reveal on scroll ───────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── Hero fade-up stagger ───────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fu   { opacity: 0; animation: fadeUp 0.6s ease forwards; }
+.fu-1 { animation-delay: 0.05s; }
+.fu-2 { animation-delay: 0.18s; }
+.fu-3 { animation-delay: 0.30s; }
+.fu-4 { animation-delay: 0.44s; }
+.fu-5 { animation-delay: 0.56s; }
+
+/* ─── Marquee ────────────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-inner {
+  display: flex;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+
+/* ─── Grain texture ──────────────────────────────────────────── */
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+/* ─── Neon glow ring (Hafiz progress) ────────────────────────── */
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 6px #CEFF05); }
+  50%       { filter: drop-shadow(0 0 16px #CEFF05); }
+}
+.neon-ring { animation: pulseGlow 2.5s ease-in-out infinite; }
+
+/* ─── Hero portrait ──────────────────────────────────────────── */
+.hero-portrait-wrap {
+  aspect-ratio: 4/5;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid #1A1A1A;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+.hero-portrait-wrap:hover {
+  border-color: #CEFF05;
+  box-shadow: 0 0 0 1px #CEFF05, 0 0 40px rgba(206,255,5,0.12);
+}
+.hero-portrait-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.05);
+  transition: transform 0.5s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+.hero-portrait-wrap:hover img {
+  transform: scale(1.04);
+}
+/* film grain overlay on portrait */
+.hero-portrait-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 2;
+  border-radius: inherit;
+}
+/* subtle dark vignette at bottom */
+.hero-portrait-wrap::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+/* ─── Mobile ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+  [style*="grid-column"]           { grid-column: span 1 !important; }
+  main         { padding-left: 16px !important; padding-right: 16px !important; }
+  .hide-mobile { display: none !important; }
+  .hero-h1     { font-size: 42px !important; letter-spacing: -0.04em !important; }
+  .hero-portrait-wrap { aspect-ratio: 3/4 !important; }
+}

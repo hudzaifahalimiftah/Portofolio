@@ -1,0 +1,141 @@
+{
+  "persona": {
+    "name": "Ali",
+    "tagline": "ALI: ARCHITECTING CODE, PRESERVING QUR'AN.",
+    "subTagline": "11th Grade SMK RPL & Santri Tahfidz. Bridging Islamic scholarship with modern software engineering.",
+    "school": "SMK x Pesantren Ar-Rahman ·",
+    "status": "looking for a Japanese scholarship",
+    "dream": "MEXT Scholarship → Senshu / Gakubu University, Japan"
+  },
+  "hafiz": {
+    "current": 15,
+    "total": 30,
+    "label": "Juz Memorized",
+    "note": "Istiqomah setiap hari ba'da Subuh"
+  },
+  "skills": [
+    "HTML/CSS",
+    "JavaScript",
+    "PHP",
+    "Laravel",
+    "MySQL",
+    "Canva",
+    "CapCut"
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "company": "PT Assalam Mitra Wisata",
+      "role": "Design & Video Intern (PKL)",
+      "period": "2024",
+      "type": "Internship",
+      "tasks": [
+        "Membuat konten visual untuk media sosial perusahaan",
+        "Mengedit video promosi paket wisata religi",
+        "Mendesain brosur dan materi marketing digital",
+        "Membantu pengelolaan aset digital perusahaan"
+      ],
+      "tags": [
+        "Canva",
+        "CapCut",
+        "Design",
+        "Video"
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "id": 1,
+      "title": "Silver Medal — Informatics",
+      "event": "Puskanas (Pekan Olahraga & Seni Nasional)",
+      "category": "Informatics",
+      "medal": "Silver",
+      "year": "2024",
+      "icon": "🥈"
+    },
+    {
+      "id": 2,
+      "title": "Bronze Medal — Mathematics",
+      "event": "Puskanas (Pekan Olahraga & Seni Nasional)",
+      "category": "Mathematics",
+      "medal": "Bronze",
+      "year": "2024",
+      "icon": "🥉"
+    },
+    {
+      "id": 3,
+      "title": "Participant — Web Development",
+      "event": "Lomba Kompetensi Siswa (LKS)",
+      "category": "Web Dev",
+      "medal": "Participant",
+      "year": "2024",
+      "icon": "🏅"
+    }
+  ],
+  "projects": [
+    {
+      "id": 2,
+      "name": "Poin Pelanggaran",
+      "description": "Sistem manajemen poin pelanggaran santri berbasis web. Admin dapat input, monitor, dan cetak laporan.",
+      "stack": [
+        "PHP",
+        "MySQL",
+        "Bootstrap"
+      ],
+      "status": "Completed",
+      "github": "https://github.com/hudzaifahalimiftah/Web---Poin-Pelanggaran",
+      "demo": null,
+      "featured": true
+    },
+    {
+      "id": 3,
+      "name": "Koperasi Syariah",
+      "description": "Aplikasi manajemen koperasi syariah pesantren. Fitur simpan-pinjam, laporan keuangan, dan dashboard.",
+      "stack": [
+        "Laravel",
+        "MySQL",
+        "Tailwind"
+      ],
+      "status": "In Progress",
+      "github": "#",
+      "demo": null,
+      "featured": true
+    },
+    {
+      "id": 4,
+      "name": "Sistem E-Katalog Kantin",
+      "description": "Tugas sekolah",
+      "stack": [
+        "native"
+      ],
+      "status": "Sedang Berlangsung",
+      "github": "#",
+      "demo": null,
+      "featured": false
+    }
+  ],
+  "japanGoal": {
+    "scholarship": "MEXT (Monbukagakusho)",
+    "universities": [
+      "Senshu University",
+      "Gakubu Program"
+    ],
+    "currentLevel": "N5 Japanese",
+    "targetYear": "2026",
+    "reason": "High-tech culture that respects tradition — just like a Santri who codes."
+  },
+  "social": [
+    {
+      "label": "Instagram",
+      "handle": "@zaeef.06",
+      "href": "https://instagram.com/zaeef.06",
+      "icon": "IG"
+    },
+    {
+      "label": "GitHub",
+      "handle": "github.com/hudzaifahalimiftah",
+      "href": "https://github.com/hudzaifahalimiftah",
+      "icon": "GH"
+    }
+  ]
+}

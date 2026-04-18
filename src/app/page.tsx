@@ -153,7 +153,7 @@ export default function Home() {
                 src="/images/ali.jpg"
                 alt={persona.name}
                 fill
-                style={{ objectFit: "cover", objectPosition: "center top", filter: "grayscale(100%)" }}
+                style={{ objectFit: "cover", objectPosition: "center top", filter: "grayscale(100%) sepia(40%) hue-rotate(20deg) saturate(300%) brightness(0.85)" }}
                 priority
               />
             </div>

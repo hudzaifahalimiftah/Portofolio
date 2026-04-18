@@ -194,4 +194,30 @@ body > * { position: relative; z-index: 1; }
   .hide-mobile { display: none !important; }
   .hero-h1     { font-size: 42px !important; letter-spacing: -0.04em !important; }
   .hero-portrait-wrap { aspect-ratio: 3/4 !important; }
+
+  /* Hero: stack vertically, photo on top */
+  .hero-layout {
+    flex-direction: column-reverse !important;
+    padding-top: 100px !important;
+    padding-bottom: 60px !important;
+    gap: 32px !important;
+    align-items: stretch !important;
+    min-height: unset !important;
+  }
+
+  /* Photo: fixed height, full width */
+  .hero-photo-col {
+    width: 100% !important;
+    flex-shrink: unset !important;
+  }
+  .hero-photo-wrap {
+    width: 100% !important;
+    height: 320px !important;
+    border-radius: 20px !important;
+  }
+
+  /* Text: full width, no centering needed */
+  .hero-layout > div:first-child {
+    justify-content: flex-start !important;
+  }
 }

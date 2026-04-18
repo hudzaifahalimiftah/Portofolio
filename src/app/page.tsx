@@ -50,7 +50,7 @@ export default function Home() {
         width: "100%",
       }}>
         {/* Two-column layout: text left, photo right */}
-        <div style={{
+        <div className="hero-layout" style={{
           display: "flex", alignItems: "stretch", justifyContent: "space-between",
           gap: 64, width: "100%", paddingTop: 120, paddingBottom: 80,
         }}>
@@ -141,8 +141,8 @@ export default function Home() {
           </div>{/* end LEFT col */}
 
           {/* RIGHT — profile photo, full height */}
-          <div className="fu fu-2" style={{ flexShrink: 0, display: "flex", alignItems: "stretch" }}>
-            <div style={{
+          <div className="fu fu-2 hero-photo-col" style={{ flexShrink: 0, display: "flex", alignItems: "stretch" }}>
+            <div className="hero-photo-wrap" style={{
               width: 420,
               borderRadius: 28,
               border: "1.5px solid #1A1A1A",

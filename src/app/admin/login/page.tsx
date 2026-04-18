@@ -2,27 +2,40 @@
 import { useState } from "react";
 import AdminPage from "@/app/admin/page";
 
-const ADMIN_PASSWORD = "A02s11a20_07L";
-
 export default function AdminLogin() {
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError]       = useState("");
+  const [loading, setLoading]   = useState(false);
   const [unlocked, setUnlocked] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === ADMIN_PASSWORD) {
-      setUnlocked(true);
-    } else {
-      setError("Password salah.");
-      setPassword("");
+    setLoading(true);
+    setError("");
+
+    try {
+      const res  = await fetch("/api/admin-login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
+      const json = await res.json();
+
+      if (json.success) {
+        setUnlocked(true);
+      } else {
+        setError(json.message ?? "Password salah.");
+        setPassword("");
+      }
+    } catch {
+      setError("Gagal menghubungi server.");
+    } finally {
+      setLoading(false);
     }
   };
 
-  // ── Sudah login → tampilkan halaman admin ──
   if (unlocked) return <AdminPage />;
 
-  // ── Belum login → tampilkan form password ──
   return (
     <main style={{
       background: "transparent", minHeight: "100vh",
@@ -89,15 +102,18 @@ export default function AdminLogin() {
 
             <button
               type="submit"
+              disabled={loading}
               style={{
-                background: "#CEFF05", color: "#000", fontWeight: 700, fontSize: 14,
-                padding: "14px", borderRadius: 12, border: "none", cursor: "pointer",
+                background: loading ? "#555" : "#CEFF05",
+                color: "#000", fontWeight: 700, fontSize: 14,
+                padding: "14px", borderRadius: 12, border: "none",
+                cursor: loading ? "not-allowed" : "pointer",
                 fontFamily: "var(--font-inter)",
-                boxShadow: "0 0 24px rgba(206,255,5,0.2)",
+                boxShadow: loading ? "none" : "0 0 24px rgba(206,255,5,0.2)",
                 transition: "all 0.2s ease", width: "100%",
               }}
             >
-              Enter →
+              {loading ? "Checking..." : "Enter →"}
             </button>
           </form>
         </div>

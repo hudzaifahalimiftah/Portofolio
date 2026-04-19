@@ -81,14 +81,14 @@ export default function Nav() {
 
         {/* CTA — desktop only */}
         {!isMobile && (
-          <Link href="/archive" className="btn-spring" style={{
+          <Link href="/order" className="btn-spring" style={{
             background: "#CEFF05", color: "#000",
             fontWeight: 700, fontSize: 12,
             padding: "7px 18px", borderRadius: 999,
             textDecoration: "none", flexShrink: 0,
             boxShadow: "0 0 20px rgba(206,255,5,0.2)",
           }}>
-            View Archive
+            Create Your Web
           </Link>
         )}
 

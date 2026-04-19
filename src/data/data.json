@@ -11,7 +11,7 @@
     "current": 15,
     "total": 30,
     "label": "Juz Memorized",
-    "note": "Istiqomah setiap hari ba'da Subuh"
+    "note": "InsyaAllah, I can maintain my memorization."
   },
   "skills": [
     "HTML/CSS",
@@ -138,11 +138,41 @@
     "reason": "High-tech culture that respects tradition — just like a Santri who codes."
   },
   "education": [
-    { "id": 1, "level": "TK",     "name": "Ittihadul Muslimat",                          "period": "2013 – 2015", "status": "done" },
-    { "id": 2, "level": "SD",     "name": "SDN 06 Warakas",                              "period": "2015 – 2021", "status": "done" },
-    { "id": 3, "level": "SMP",    "name": "Pesantren Tahfidz & Digital AR-RAHMAN + SMP Informatika Bisuness", "period": "2021 – 2024", "status": "done" },
-    { "id": 4, "level": "SMK",    "name": "Pesantren Tahfidz & Digital AR-RAHMAN + SMK Informatika Bisuness", "period": "2024 – 2027", "status": "current" },
-    { "id": 5, "level": "KULIAH", "name": "Senshu University, Japan — Beasiswa MEXT",    "period": "2026 →",      "status": "dream" }
+    {
+      "id": 1,
+      "level": "TK",
+      "name": "Ittihadul Muslimat",
+      "period": "2013 – 2015",
+      "status": "done"
+    },
+    {
+      "id": 2,
+      "level": "SD",
+      "name": "SDN 06 Warakas",
+      "period": "2015 – 2021",
+      "status": "done"
+    },
+    {
+      "id": 3,
+      "level": "SMP",
+      "name": "Pesantren Tahfidz & Digital AR-RAHMAN + SMP Informatika Bisuness",
+      "period": "2021 – 2024",
+      "status": "done"
+    },
+    {
+      "id": 4,
+      "level": "SMK",
+      "name": "Pesantren Tahfidz & Digital AR-RAHMAN + SMK Informatika Bisuness",
+      "period": "2024 – 2027",
+      "status": "current"
+    },
+    {
+      "id": 5,
+      "level": "KULIAH",
+      "name": "Senshu University, Japan — Beasiswa MEXT",
+      "period": "2026 →",
+      "status": "dream"
+    }
   ],
   "social": [
     {

@@ -44,14 +44,16 @@
     },
     {
       "id": 2,
-      "company": "PT Assalam",
+      "company": "PT  Assalam",
       "role": "Data Analis",
       "period": "2026",
       "type": "Internship",
       "tasks": [
         "Analisis"
       ],
-      "tags": []
+      "tags": [
+        "Word"
+      ]
     }
   ],
   "achievements": [

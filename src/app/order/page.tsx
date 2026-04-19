@@ -122,7 +122,7 @@ export default function OrderPage() {
           description: form.description,
           deadline: form.deadline,
           budget: form.budget,
-          _replyto: "halimiftah.ptdarrahman@gmail.com",
+          _replyto: "letsgrowtocuan@gmail.com",
           _subject: `[Web Order] ${form.type} — ${form.name}`,
         }),
       });

@@ -8,10 +8,10 @@
     "dream": "MEXT Scholarship → Senshu / Gakubu University, Japan"
   },
   "hafiz": {
-    "current": 17,
+    "current": 15,
     "total": 30,
     "label": "Juz Memorized",
-    "note": "Istiqomah setiap hari ba'da Subuh"
+    "note": "InsyaAllah, I can maintain my memorization"
   },
   "skills": [
     "HTML/CSS",
@@ -44,16 +44,14 @@
     },
     {
       "id": 2,
-      "company": "PT  Assalam",
+      "company": "PT Assalam",
       "role": "Data Analis",
       "period": "2026",
       "type": "Internship",
       "tasks": [
         "Analisis"
       ],
-      "tags": [
-        "Word"
-      ]
+      "tags": []
     }
   ],
   "achievements": [

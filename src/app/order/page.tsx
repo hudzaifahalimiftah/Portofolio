@@ -157,7 +157,7 @@ export default function OrderPage() {
           <div style={{
             display: "inline-flex", alignItems: "center", gap: 8,
             border: "1.5px solid #1A1A1A", borderRadius: 999,
-            padding: "5px 16px", marginBottom: 20, display: "flex",
+            padding: "5px 16px", marginBottom: 20,
           }}>
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#CEFF05", boxShadow: "0 0 8px #CEFF05", flexShrink: 0 }} />
             <span style={{ color: "#555", fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "var(--font-inter)" }}>

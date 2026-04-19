@@ -66,7 +66,7 @@ export default function AdminPage() {
       setLiveData(data);
       notify(msg);
     } catch (err) {
-      notify(err instanceof Error ? err.message : "Gagal menyimpan.", "error");
+      notify(err instanceof Error ? err.message : "Failed to save.", "error");
     }
   };
 
@@ -83,7 +83,7 @@ export default function AdminPage() {
         demo: (project.demo || null) as null, featured: false,
       }],
     };
-    await saveToApi(updated, `Project "${project.name}" ditambahkan!`);
+    await saveToApi(updated, `Project "${project.name}" added!`);
     setProject({ name: "", description: "", stack: "", status: "Completed", github: "", demo: "" });
   };
 
@@ -98,7 +98,7 @@ export default function AdminPage() {
         year: achievement.year, icon: medalIcon[achievement.medal] ?? "🏅",
       }],
     };
-    await saveToApi(updated, `Achievement "${achievement.title}" ditambahkan!`);
+    await saveToApi(updated, `Achievement "${achievement.title}" added!`);
     setAchievement({ title: "", event: "", medal: "Gold", category: "", year: new Date().getFullYear().toString() });
   };
 
@@ -114,14 +114,14 @@ export default function AdminPage() {
         tags: experience.tags.split(",").map(t => t.trim()).filter(Boolean),
       }],
     };
-    await saveToApi(updated, `Experience "${experience.company}" ditambahkan!`);
+    await saveToApi(updated, `Experience "${experience.company}" added!`);
     setExperience({ company: "", role: "", period: "", type: "Internship", tasks: "", tags: "" });
   };
 
   const handleUpdateHafiz = async (e: React.FormEvent) => {
     e.preventDefault();
     const updated = { ...liveData, hafiz: { ...liveData.hafiz, current: hafiz.current, note: hafiz.note } };
-    await saveToApi(updated, `Hafiz diupdate ke ${hafiz.current} Juz!`);
+    await saveToApi(updated, `Hafiz updated to ${hafiz.current} Juz!`);
   };
 
   // ── EDIT save handlers ────────────────────────────────────────────────────
@@ -132,7 +132,7 @@ export default function AdminPage() {
       ...liveData,
       projects: liveData.projects.map(p => p.id === editingProject.id ? editingProject : p),
     };
-    await saveToApi(updated, `Project "${editingProject.name}" diupdate!`);
+    await saveToApi(updated, `Project "${editingProject.name}" updated!`);
     setEditingProject(null);
   };
 
@@ -145,7 +145,7 @@ export default function AdminPage() {
         ? { ...editingAchievement, icon: medalIcon[editingAchievement.medal] ?? "🏅" }
         : a),
     };
-    await saveToApi(updated, `Achievement "${editingAchievement.title}" diupdate!`);
+    await saveToApi(updated, `Achievement "${editingAchievement.title}" updated!`);
     setEditingAchievement(null);
   };
 
@@ -156,27 +156,27 @@ export default function AdminPage() {
       ...liveData,
       experience: liveData.experience.map(ex => ex.id === editingExperience.id ? editingExperience : ex),
     };
-    await saveToApi(updated, `Experience "${editingExperience.company}" diupdate!`);
+    await saveToApi(updated, `Experience "${editingExperience.company}" updated!`);
     setEditingExperience(null);
   };
 
   // ── DELETE handlers ───────────────────────────────────────────────────────
   const deleteProject = async (id: number) => {
-    if (!confirm("Hapus project ini?")) return;
+    if (!confirm("Delete this project?")) return;
     const updated = { ...liveData, projects: liveData.projects.filter(p => p.id !== id) };
-    await saveToApi(updated, "Project dihapus.");
+    await saveToApi(updated, "Project deleted.");
   };
 
   const deleteAchievement = async (id: number) => {
-    if (!confirm("Hapus achievement ini?")) return;
+    if (!confirm("Delete this achievement?")) return;
     const updated = { ...liveData, achievements: liveData.achievements.filter(a => a.id !== id) };
-    await saveToApi(updated, "Achievement dihapus.");
+    await saveToApi(updated, "Achievement deleted.");
   };
 
   const deleteExperience = async (id: number) => {
-    if (!confirm("Hapus experience ini?")) return;
+    if (!confirm("Delete this experience?")) return;
     const updated = { ...liveData, experience: liveData.experience.filter(ex => ex.id !== id) };
-    await saveToApi(updated, "Experience dihapus.");
+    await saveToApi(updated, "Experience deleted.");
   };
 
   const tabs: { key: Tab; label: string }[] = [

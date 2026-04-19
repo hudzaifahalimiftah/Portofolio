@@ -8,7 +8,7 @@
     "dream": "MEXT Scholarship → Senshu / Gakubu University, Japan"
   },
   "hafiz": {
-    "current": 15,
+    "current": 17,
     "total": 30,
     "label": "Juz Memorized",
     "note": "InsyaAllah, I can maintain my memorization"
@@ -30,10 +30,10 @@
       "period": "2024",
       "type": "Internship",
       "tasks": [
-        "Membuat konten visual untuk media sosial perusahaan",
-        "Mengedit video promosi paket wisata religi",
-        "Mendesain brosur dan materi marketing digital",
-        "Membantu pengelolaan aset digital perusahaan"
+        "Create visual content for company social media",
+        "Edit promotional videos for religious tourism packages",
+        "Design brochures and digital marketing materials",
+        "Help manage company digital assets"
       ],
       "tags": [
         "Canva",
@@ -41,6 +41,17 @@
         "Design",
         "Video"
       ]
+    },
+    {
+      "id": 2,
+      "company": "PT Assalam",
+      "role": "Data Analis",
+      "period": "2026",
+      "type": "Internship",
+      "tasks": [
+        "Analyze data"
+      ],
+      "tags": []
     }
   ],
   "achievements": [
@@ -76,7 +87,7 @@
     {
       "id": 2,
       "name": "Poin Pelanggaran",
-      "description": "Sistem manajemen poin pelanggaran santri berbasis web. Admin dapat input, monitor, dan cetak laporan.",
+      "description": "Web-based student violation point management system. Admin can input, monitor, and print reports.",
       "stack": [
         "PHP",
         "MySQL",
@@ -90,7 +101,7 @@
     {
       "id": 3,
       "name": "Koperasi Syariah",
-      "description": "Aplikasi manajemen koperasi syariah pesantren. Fitur simpan-pinjam, laporan keuangan, dan dashboard.",
+      "description": "Islamic cooperative management app for boarding school. Features savings-loans, financial reports, and dashboard.",
       "stack": [
         "Laravel",
         "MySQL",
@@ -104,7 +115,7 @@
     {
       "id": 4,
       "name": "Sistem E-Katalog Kantin",
-      "description": "Tugas sekolah",
+      "description": "School assignment",
       "stack": [
         "native"
       ],
@@ -142,21 +153,21 @@
     {
       "id": 3,
       "level": "SMP",
-      "name": "Pesantren Tahfidz & Digital AR-RAHMAN + SMP Informatika Bisuness",
+      "name": "Islamic Boarding School Tahfidz & Digital AR-RAHMAN + Junior High School Informatics Business",
       "period": "2021 – 2024",
       "status": "done"
     },
     {
       "id": 4,
       "level": "SMK",
-      "name": "Pesantren Tahfidz & Digital AR-RAHMAN + SMK Informatika Bisuness",
+      "name": "Islamic Boarding School Tahfidz & Digital AR-RAHMAN + Vocational High School Informatics Business",
       "period": "2024 – 2027",
       "status": "current"
     },
     {
       "id": 5,
       "level": "KULIAH",
-      "name": "Senshu University, Japan — Beasiswa MEXT",
+      "name": "Senshu University, Japan — MEXT Scholarship",
       "period": "2026 →",
       "status": "dream"
     }

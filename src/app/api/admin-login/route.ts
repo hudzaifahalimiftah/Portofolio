@@ -13,9 +13,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: true });
     }
 
-    // Delay biar nggak bisa brute-force cepat
+    // Delay to prevent brute-force attacks
     await new Promise(r => setTimeout(r, 800));
-    return NextResponse.json({ success: false, message: 'Password salah.' }, { status: 401 });
+    return NextResponse.json({ success: false, message: 'Wrong password.' }, { status: 401 });
   } catch {
     return NextResponse.json({ success: false, message: 'Invalid request.' }, { status: 400 });
   }

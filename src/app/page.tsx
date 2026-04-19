@@ -241,7 +241,7 @@ export default function Home() {
                               color: "#CEFF05", fontSize: 9, fontWeight: 700,
                               padding: "2px 8px", borderRadius: 999,
                               fontFamily: "var(--font-inter)", letterSpacing: "0.08em",
-                            }}>SEKARANG</span>
+                            }}>CURRENT</span>
                           )}
                           {isDream && (
                             <span style={{
@@ -249,7 +249,7 @@ export default function Home() {
                               fontSize: 9, fontWeight: 700,
                               padding: "2px 8px", borderRadius: 999,
                               fontFamily: "var(--font-inter)", letterSpacing: "0.08em",
-                            }}>IMPIAN</span>
+                            }}>DREAM</span>
                           )}
                           <span style={{ color: "#333", fontSize: 11, fontFamily: "var(--font-jakarta)" }}>
                             {edu.period}
@@ -437,7 +437,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── IMPIAN · MOTTO · DOUBLE LIFE ─────────────────── */}
+      {/* ── DREAM · MOTTO · DOUBLE LIFE ─────────────────── */}
       <section style={{ padding: "0 24px 120px", maxWidth: 1200, margin: "0 auto" }}>
 
         {/* Badge penanda */}
@@ -450,7 +450,7 @@ export default function Home() {
             }}>
               <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#CEFF05", boxShadow: "0 0 8px #CEFF05" }} />
               <span style={{ color: "#555", fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "var(--font-inter)" }}>
-                Impian · Motto · Identitas
+                Dream · Motto · Identity
               </span>
             </div>
           </div>
@@ -530,13 +530,13 @@ export default function Home() {
                 letterSpacing: "-0.04em", lineHeight: 1.2, marginBottom: 16,
                 fontFamily: "var(--font-inter)",
               }}>
-                Santri di Pagi Hari,<br />
-                <span style={{ color: "#CEFF05" }}>Developer di Siang Hari.</span>
+                Santri in the Morning,<br />
+                <span style={{ color: "#CEFF05" }}>Developer in the Afternoon.</span>
               </h2>
               <p style={{ color: "#555", fontSize: 13, lineHeight: 1.7, fontFamily: "var(--font-jakarta)" }}>
-                Setiap hari dimulai dengan Muraja&apos;ah sebelum fajar, lalu laptop terbuka
-                untuk React, PHP, dan Laravel. Hafalan Al-Qur&apos;an dan coding bukan dua hal
-                yang bertentangan — keduanya adalah bentuk ibadah.
+                Every day starts with Muraja&apos;ah before dawn, then the laptop opens
+                for React, PHP, and Laravel. Qur&apos;an memorization and coding are not
+                two conflicting things — both are forms of worship.
               </p>
             </div>
           </Reveal>

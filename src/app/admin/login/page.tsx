@@ -24,11 +24,11 @@ export default function AdminLogin() {
       if (json.success) {
         setUnlocked(true);
       } else {
-        setError(json.message ?? "Password salah.");
+        setError(json.message ?? "Wrong password.");
         setPassword("");
       }
     } catch {
-      setError("Gagal menghubungi server.");
+      setError("Failed to connect to server.");
     } finally {
       setLoading(false);
     }
@@ -60,7 +60,7 @@ export default function AdminLogin() {
             Admin Only.
           </h1>
           <p style={{ color: "#444", fontSize: 13, fontFamily: "var(--font-jakarta)", textAlign: "center" }}>
-            Halaman ini hanya bisa dibuka oleh{" "}
+            This page can only be accessed by{" "}
             <span style={{ color: "#CEFF05", fontWeight: 700 }}>Ali</span>.
           </p>
         </div>

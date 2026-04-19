@@ -2,6 +2,10 @@
  * HOME PAGE
  * All content driven by src/data/data.json
  */
+
+// Revalidate every 30 seconds (ISR) so data updates without full redeploy
+export const revalidate = 30;
+
 import Link from "next/link";
 import Image from "next/image";
 import data from "@/data/data.json";

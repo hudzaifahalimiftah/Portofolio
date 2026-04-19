@@ -70,6 +70,15 @@
       "medal": "Participant",
       "year": "2024",
       "icon": "🏅"
+    },
+    {
+      "id": 4,
+      "title": "Aaaaa",
+      "event": "SSSSS",
+      "category": "AAAAAA",
+      "medal": "Gold",
+      "year": "2026",
+      "icon": "🥇"
     }
   ],
   "projects": [

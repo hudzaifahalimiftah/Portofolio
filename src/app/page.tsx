@@ -6,8 +6,6 @@ import Link from "next/link";
 import Image from "next/image";
 import data from "@/data/data.json";
 import Reveal from "@/components/Reveal";
-import HafizRing from "@/components/HafizRing";
-import SkillChip from "@/components/SkillChip";
 
 /* ── design tokens ───────────────────────────────────────────── */
 const card: React.CSSProperties = {

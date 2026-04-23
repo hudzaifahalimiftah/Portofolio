@@ -52,8 +52,6 @@ const medalColor: Record<string, string> = {
   "3rd Place": "#CD7F32",
   "Honorable Mention": "#888",
 };
-  Participant: "#555",
-};
 
 export default function ArchivePage() {
   const { experience, achievements, projects } = data;

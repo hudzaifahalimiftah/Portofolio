@@ -23,7 +23,11 @@ const lbl: React.CSSProperties = {
   display: "block", color: "#444", fontSize: 10, fontWeight: 700,
   letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8, fontFamily: "var(--font-inter)",
 };
-const medalIcon: Record<string, string> = { Gold: "🥇", Silver: "🥈", Bronze: "🥉", Participant: "🏅" };
+const medalIcon: Record<string, string> = {
+  Gold: "🥇", Silver: "🥈", Bronze: "🥉", Participant: "🏅",
+  "1st Place": "🏆", "2nd Place": "🥈", "3rd Place": "🥉",
+  "Honorable Mention": "🎖️",
+};
 const abtn = (color: string): React.CSSProperties => ({
   background: "transparent", border: `1.5px solid ${color}`, color,
   borderRadius: 8, padding: "4px 12px", fontSize: 11, fontWeight: 700,
@@ -343,7 +347,7 @@ export default function AdminPage() {
                         <input required value={editingAchievement.event} onChange={e => setEditingAchievement({ ...editingAchievement, event: e.target.value })} placeholder="Event" style={inp(focused === "ea-event")} onFocus={() => setFocused("ea-event")} onBlur={() => setFocused(null)} />
                         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
                           <select value={editingAchievement.medal} onChange={e => setEditingAchievement({ ...editingAchievement, medal: e.target.value })} style={{ ...inp(false), cursor: "pointer", appearance: "none" }}>
-                            {["Gold","Silver","Bronze","Participant"].map(m => <option key={m} style={{ background: "#0A0A0A" }}>{m}</option>)}
+                            {["Gold","Silver","Bronze","Participant","1st Place","2nd Place","3rd Place","Honorable Mention"].map(m => <option key={m} style={{ background: "#0A0A0A" }}>{m}</option>)}
                           </select>
                           <input required value={editingAchievement.category} onChange={e => setEditingAchievement({ ...editingAchievement, category: e.target.value })} placeholder="Category" style={inp(focused === "ea-cat")} onFocus={() => setFocused("ea-cat")} onBlur={() => setFocused(null)} />
                           <input value={editingAchievement.year} onChange={e => setEditingAchievement({ ...editingAchievement, year: e.target.value })} placeholder="Year" style={inp(focused === "ea-year")} onFocus={() => setFocused("ea-year")} onBlur={() => setFocused(null)} />
@@ -378,7 +382,7 @@ export default function AdminPage() {
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
                   <div><label style={lbl}>Medal</label>
                     <select value={achievement.medal} onChange={e => setAchievement({ ...achievement, medal: e.target.value })} style={{ ...inp(false), cursor: "pointer", appearance: "none" }}>
-                      {["Gold","Silver","Bronze","Participant"].map(m => <option key={m} style={{ background: "#0A0A0A" }}>{m}</option>)}
+                      {["Gold","Silver","Bronze","Participant","1st Place","2nd Place","3rd Place","Honorable Mention"].map(m => <option key={m} style={{ background: "#0A0A0A" }}>{m}</option>)}
                     </select>
                   </div>
                   <div><label style={lbl}>Category *</label><input required value={achievement.category} onChange={e => setAchievement({ ...achievement, category: e.target.value })} placeholder="Informatics" style={inp(focused === "acat")} onFocus={() => setFocused("acat")} onBlur={() => setFocused(null)} /></div>

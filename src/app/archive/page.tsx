@@ -43,8 +43,15 @@ const tagStyle = (accent = false): React.CSSProperties => ({
 });
 
 const medalColor: Record<string, string> = {
+  Gold: "#FFD700",
   Silver: "#C0C0C0",
   Bronze: "#CD7F32",
+  Participant: "#555",
+  "1st Place": "#FFD700",
+  "2nd Place": "#C0C0C0",
+  "3rd Place": "#CD7F32",
+  "Honorable Mention": "#888",
+};
   Participant: "#555",
 };
 

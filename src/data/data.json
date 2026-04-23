@@ -41,6 +41,17 @@
         "Design",
         "Video"
       ]
+    },
+    {
+      "id": 2,
+      "company": "PT Assalam",
+      "role": "Data Analis",
+      "period": "2026",
+      "type": "Internship",
+      "tasks": [
+        "Analyze data"
+      ],
+      "tags": []
     }
   ],
   "achievements": [
@@ -50,7 +61,7 @@
       "event": "Puskanas (Pekan Olahraga & Seni Nasional)",
       "category": "Informatics",
       "medal": "Silver",
-      "year": "2024",
+      "year": "2026",
       "icon": "🥈"
     },
     {
@@ -70,6 +81,15 @@
       "medal": "Participant",
       "year": "2024",
       "icon": "🏅"
+    },
+    {
+      "id": 4,
+      "title": "STORY TELLING ABOUT PROPHET MUHAMMAD",
+      "event": "Festival Ramadhan - MTTG",
+      "category": "Story Telling",
+      "medal": "2nd Place",
+      "year": "2022",
+      "icon": "🥈"
     }
   ],
   "projects": [

@@ -81,14 +81,14 @@ export default function Nav() {
 
         {/* CTA — desktop only */}
         {!isMobile && (
-          <Link href="/order" className="btn-spring" style={{
+          <Link href="/archive" className="btn-spring" style={{
             background: "#CEFF05", color: "#000",
             fontWeight: 700, fontSize: 12,
             padding: "7px 18px", borderRadius: 999,
             textDecoration: "none", flexShrink: 0,
             boxShadow: "0 0 20px rgba(206,255,5,0.2)",
           }}>
-            Create Your Web
+            View Archive
           </Link>
         )}
 
@@ -134,13 +134,13 @@ export default function Nav() {
             </Link>
           ))}
           <div style={{ height: 1, background: "#111", margin: "4px 0" }} />
-          <Link href="/order" onClick={() => setOpen(false)} style={{
+          <Link href="/archive" onClick={() => setOpen(false)} style={{
             background: "#CEFF05", color: "#000", fontWeight: 700, fontSize: 14,
             padding: "13px 16px", borderRadius: 14, textDecoration: "none",
             textAlign: "center", fontFamily: "var(--font-inter)",
             boxShadow: "0 0 20px rgba(206,255,5,0.15)",
           }}>
-            Create Your Web →
+            View Archive →
           </Link>
         </div>
       )}

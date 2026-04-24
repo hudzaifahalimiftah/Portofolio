@@ -41,17 +41,6 @@
         "Design",
         "Video"
       ]
-    },
-    {
-      "id": 2,
-      "company": "PT Assalam",
-      "role": "Data Analis",
-      "period": "2026",
-      "type": "Internship",
-      "tasks": [
-        "Analyze data"
-      ],
-      "tags": []
     }
   ],
   "achievements": [
